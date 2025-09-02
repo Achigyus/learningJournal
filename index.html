@@ -1,9 +1,55 @@
-<html>
-    <head>
-        <title>My Learning Journal</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h1>index.html</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Journal</title>
+    <link rel="stylesheet" href="css/style.sass">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrap">
+            <nav class="navbar">
+                <div class="nav_logo_title">
+                    <div class="nav_img_cont">
+                        <img src="" alt="" class="nav_img">
+                        <h1 class="nav_h1">My learning journal</h1>
+                    </div>
+                </div>
+                <ul class="nav_ul">
+                    <li class="nav_li">Home</li>
+                    <li class="nav_li">About Me</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="wrap" id="main_wrap">
+            <section class="hero_section">
+                <p class="hero_date">JULY 23, 2022</p>
+                <h2 class="hero_h2">My new journey as a bootcamp student.</h2>
+                <p class="hero_p">After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+            </section>
+
+            <section class="blogs_section">
+                <div class="blogs_wrap" id="blogs_wrap">
+                    <!-- Blog cards will be rendered here by JS -->
+                </div>
+                <button class="view_more" id="view_more">View More</button>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <p class="footer_title">My Learning Journal</p>
+            <p class="copyright">Copyright ©2022</p>
+        </div>
+    </footer>
+    <script src="scripts/app.js" type="module"></script>
+</body>
+
 </html>
