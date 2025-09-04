@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Learning Journal</title>
+    <title>Blog Post</title>
     <link rel="stylesheet" href="css/style.sass">
 </head>
-
 <body>
     <header class="header">
         <div class="wrap">
@@ -27,20 +25,19 @@
     </header>
 
     <main class="main">
-        <div class="wrap" id="main_wrap">
-            <section class="hero_section">
-                <a href="post.html?id=hero">
-                    <p class="hero_date">JULY 23, 2022</p>
-                    <h2 class="hero_h2">My new journey as a bootcamp student.</h2>
-                    <p class="hero_p">After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
-                </a>
+        <div class="wrap">
+            <section id="post_section">
+                <!-- Blog post will be rendered here by JS -->
+
+                
             </section>
 
-            <section class="blogs_section">
-                <div class="blogs_wrap" id="blogs_wrap">
-                    <!-- Blog cards will be rendered here by JS -->
+            <section class="recent_posts" aria-labelledby="recent_posts_h2">
+                <h2 class="recent_posts_h2" id="recent_posts_h2">Recent Posts</h2>
+
+                <div class="blogs_wrap" id="recent_posts_cont">
+                    <!-- Recent posts will be rendered here by JS -->
                 </div>
-                <button class="view_more hidden" id="view_more">View More</button>
             </section>
         </div>
     </main>
@@ -51,7 +48,6 @@
             <p class="copyright">Copyright ©2022</p>
         </div>
     </footer>
-    <script src="scripts/app.js" type="module"></script>
+    <script type="module" src="scripts/post.js"></script>
 </body>
-
 </html>
