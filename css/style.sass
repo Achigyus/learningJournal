@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap')
+* 
+    box-sizing: border-box
+    font-family: 'Source Sans 3', sans-serif
+    margin: 0
+    padding: 0
+    
 html, 
 body
     margin: 0
     padding: 0
+    overflow-x: hidden
 
 .view_more
     display: block
@@ -16,3 +24,76 @@ body
 
     &.hidden
         display: none
+
+.dropdown_btn
+    background: transparent
+    z-index: 2
+    border: none
+
+    .bar
+        display: block
+        width: 25px
+        height: 3px
+        margin: 5px auto
+        background-color: #333
+        transition: all 0.3s ease
+        
+    &.nav_open .bar:nth-child(1)
+        transform: translate(0, 8px) rotate(-45deg)
+    &.nav_open .bar:nth-child(2)
+        opacity: 0
+    &.nav_open .bar:nth-child(3)
+        transform: translate(0, -8px) rotate(45deg)
+
+header
+    padding: 20px
+nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 20px
+    // overflow: hidden
+
+    .nav_img_cont
+        display: flex
+        align-items: center
+        gap: 5px
+
+.nav_h1
+    font-family: 'Roboto', sans-serif
+    font-weight: 700
+    font-size: 18px
+    color: #0E0E0E
+    line-height: 1.08
+
+.nav_ul
+    list-style: none
+    display: flex
+    flex-direction: column
+    padding-block-start: 80px
+    align-items: center
+    gap: 20px
+    position: absolute
+    min-block-size: 100vh
+    min-inline-size: 60%
+    top: 0
+    right: -100%
+    background-color: #f4f4f4
+    transition: right 0.3s ease
+
+    &.nav_open
+        right: 0
+
+.nav_li
+    a
+        text-decoration: none
+        color: #090909
+        font-size: 15px
+        font-weight: 500
+        line-height: 1.0
+
+        &:hover
+            color: #007BFF
+
+
+
