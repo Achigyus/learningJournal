@@ -11,20 +11,6 @@ body
     padding: 0
     overflow-x: hidden
 
-.view_more
-    display: block
-    margin: 20px auto
-    padding: 10px 20px
-    font-size: 16px
-    background-color: #007BFF
-    color: white
-    border: none
-    border-radius: 5px
-    cursor: pointer
-
-    &.hidden
-        display: none
-
 .dropdown_btn
     background: transparent
     z-index: 2
@@ -37,6 +23,11 @@ body
         margin: 5px auto
         background-color: #333
         transition: all 0.3s ease
+
+    &.nav_open
+        position: fixed
+        top: 20px
+        right: 20px
         
     &.nav_open .bar:nth-child(1)
         transform: translate(0, 8px) rotate(-45deg)
@@ -47,6 +38,11 @@ body
 
 header
     padding: 20px
+
+.wrap 
+    max-width: 1200px
+    margin: 0 auto
+
 nav
     display: flex
     justify-content: space-between
@@ -73,7 +69,7 @@ nav
     padding-block-start: 80px
     align-items: center
     gap: 20px
-    position: absolute
+    position: fixed
     min-block-size: 100vh
     min-inline-size: 60%
     top: 0
@@ -95,5 +91,158 @@ nav
         &:hover
             color: #007BFF
 
+.hero_section
+    a
+        display: block
+        text-decoration: none
+        color: #fff
+        background-image: url('../images/blog-image-hero-mobile.png')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        min-height: 300px
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        gap: 10px
+        padding: 25px 20px
+
+        @media screen and (min-width: 768px)
+            padding: 55px
+            background-image: url('../images/blog-image-hero-desktop.png')
+            min-height: 500px
+
+        .hero_date
+            font-size: 12px
+            line-height: 1.25
+            font-weight: 400
+
+            @media screen and (min-width: 768px) 
+                font-size: 16px
+
+        .hero_h2
+            font-size: 32px
+            line-height: 1.08
+            font-weight: 700
+            letter-spacing: -0.03em
+
+            @media screen and (min-width: 768px) 
+                font-size: 40px
+            
+            
+        .hero_p
+            font-size: 16px
+            line-height: 1.25
+            font-weight: 400
+
+.blogs_wrap
+    display: grid
+    grid-template-columns: 1fr
+    gap: 40px
+    padding: 30px 20px
+
+    a
+        text-decoration: none
+        color: #000
+        display: block
+        transition: transform 0.3s ease
+
+        &:hover
+            transform: scale(1.02)
+
+        .blog_img_cont
+            margin-bottom: 14px
+
+            .blog_img
+                display: block
+                width: 100%
+                border-radius: 5px
+
+        .blog_date
+            font-size: 14px
+            line-height: 1.25
+            font-weight: 400
+            margin-bottom: 9px
+
+        .blog_title
+            font-size: 24px
+            color: #141414
+            line-height: 1.08
+            font-weight: 700
+            margin-bottom: 9px
+
+        .blog_desc
+            font-size: 16px
+            line-height: 1.25
+            color: #505050
+            font-weight: 400
+
+    @media screen and (min-width: 768px)
+        grid-template-columns: repeat(3, 1fr)
+        padding: 55px
+        gap: 25px
+
+.view_more
+    display: block
+    font-size: 16px
+    line-height: 1.25
+    font-weight: 700
+    color: #000
+    text-decoration: underline
+    text-align: center
+    border: none
+    cursor: pointer
+    background: transparent
+    margin: 0 auto
+    margin-bottom: 43px
+
+    &:hover
+        color: #007BFF
+
+    &.hidden
+        display: none
+
+.footer
+    .wrap
+        background: #202020
+        padding: 37px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 4px
+
+        .footer_title
+            font-size: 12px
+            line-height: 1.08
+            color: #ECECEC
+            font-weight: 700
+
+        .copyright
+            font-size: 12px
+            line-height: 1.25
+            color: #D7D7D7
+            font-weight: 400
+        
 
 
+@media screen and (min-width: 768px)
+    .dropdown_btn
+        display: none
+
+    nav
+        .nav_ul
+            position: static
+            flex-direction: row
+            min-block-size: auto
+            min-inline-size: auto
+            padding-block-start: 0
+            background-color: transparent
+            justify-content: flex-end
+
+            &.nav_open
+                right: 0
+            .nav_li
+                a
+                    font-size: 16px
+                    &:hover
+                        color: #007BFF
