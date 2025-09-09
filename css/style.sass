@@ -55,6 +55,9 @@ nav
         align-items: center
         gap: 5px
 
+.nav_logo_title
+    text-decoration: none
+
 .nav_h1
     font-family: 'Roboto', sans-serif
     font-weight: 700
@@ -223,7 +226,128 @@ nav
             color: #D7D7D7
             font-weight: 400
         
+.about_me_section
+    padding: 25px 20px 45px 20px
+    display: flex
+    flex-direction: column
+    gap: 50px
 
+    .about_me_top
+        display: flex
+        flex-direction: column
+        gap: 25px
+
+        .about_short
+            display: flex
+            flex-direction: column
+            gap: 16px
+
+            .about_short_h2
+                font-size: 34.8px
+                line-height: 1.08
+                font-weight: 700
+                letter-spacing: -0.03em
+                color: #151515
+
+            .about_short_p
+                font-size: 16px
+                line-height: 1.25
+                color: #151515
+                font-weight: 400
+
+    @media screen and (min-width: 768px)
+        padding: 90px 55px 50px 55px
+        gap: 65px
+
+        .about_me_top
+            gap: 33px
+            flex-direction: row
+            align-items: center
+
+            .about_short
+                gap: 10px
+
+                .about_short_h2
+                    font-size: 36px
+            
+
+.how_i_got_here
+    font-size: 16px
+    line-height: 1.25
+    color: #151515
+
+    span
+        font-weight: 700
+
+    @media screen and (min-width: 768px)
+        max-width: 845px
+        margin: 0 auto
+        font-size: 20px
+
+.recent_posts_h2
+    font-size: 16px
+    line-height: 1.25
+    color: #000
+    font-weight: 700
+    text-align: center
+
+    @media screen and (min-width: 768px)
+        font-size: 24px
+        line-height: 1.08
+        color: #141414
+
+.post_section
+    padding: 30px 20px 50px 20px
+
+    @media screen and (min-width: 768px)
+        padding: 70px 55px
+
+.blog_post
+    display: flex
+    flex-direction: column
+    gap: 35px
+    margin-bottom: 35px
+
+.blog_text_cont
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+    .blog_date
+        font-size: 12px
+        line-height: 1.25
+        font-weight: 400
+        color: #151515
+
+    .blog_title
+        font-size: 32px
+        line-height: 1.08
+        font-weight: 700
+        letter-spacing: -0.03em
+        color: #151515
+
+    .blog_desc
+        font-size: 16px
+        line-height: 1.25
+        color: #151515
+        font-weight: 400
+
+    @media screen and (min-width: 768px)
+        max-width: 845px
+        margin: 0 auto
+        gap: 24px
+        
+        .blog_date
+            font-size: 16px
+
+        .blog_title
+            font-size: 36px
+
+.blog_img_cont
+    .blog_img
+        display: block
+        width: 100%
+        border-radius: 5px
 
 @media screen and (min-width: 768px)
     .dropdown_btn

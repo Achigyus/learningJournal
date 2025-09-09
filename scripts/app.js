@@ -76,12 +76,14 @@ function renderPost() {
 
     postSection.innerHTML = `
         <div class="blog_post">
+            <div class="blog_text_cont">
+                <p class="blog_date">${blog.date}</p>
+                <h2 id="post_h2" class="blog_title">${blog.title}</h2>
+                <p class="blog_desc">${blog.content}</p>
+            </div>
             <div class="blog_img_cont">
                 <img src="images/${blog.image}" alt="#" class="blog_img">
             </div>
-            <p class="blog_date">${blog.date}</p>
-            <h2 class="blog_title">${blog.title}</h2>
-            <p class="blog_desc">${blog.content}</p>
         </div>
         <div class="about_me_btm">
             <p class="how_i_got_here">
